@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 
 function UserForm() {
   const [user, setUser] = useState({});
@@ -26,7 +26,7 @@ function UserForm() {
           name="first_name"
           onChange={handleInputChange}
           value={user.first_name}
-          id=""
+          id="first_name"
         />
         <label htmlFor="">Apellido</label>
         <input
@@ -34,7 +34,7 @@ function UserForm() {
           name="last_name"
           onChange={handleInputChange}
           value={user.last_name}
-          id=""
+          id="last_name"
         />
         <label htmlFor="">Nombre de usuario</label>
         <input
@@ -42,7 +42,7 @@ function UserForm() {
           name="username"
           onChange={handleInputChange}
           value={user.username}
-          id=""
+          id="username"
         />
         <label htmlFor="">Email</label>
         <input
@@ -50,15 +50,15 @@ function UserForm() {
           name="email"
           onChange={handleInputChange}
           value={user.email}
-          id=""
+          id="email"
         />
         <label htmlFor="">Contraseña</label>
         <input
-          type="text"
+          type="password"
           name="password"
           onChange={handleInputChange}
           value={user.password}
-          id=""
+          id="password"
         />
         <button type="submit">Enviar</button>
       </form>
